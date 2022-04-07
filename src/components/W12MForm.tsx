@@ -13,7 +13,7 @@ const W12MForm = () => {
 	const [speciesName, setSpeciesName] = useState<string>("")
 	const [planetName, setPlanetName] = useState<string>("")
 	const [numberOfBeings, setNumberOfBeings] = useState<number>(0)
-	const [captcha, setCaptcha] = useState<string>("")
+	const [captcha, setCaptcha] = useState<string>("none")
 	const [reasonForSparing, setReasonForSparing] = useState<string>("")
 	const [formSubmitted, setFormSubmitted] = useState<string>("not yet")
 
