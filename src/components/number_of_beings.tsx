@@ -4,10 +4,10 @@ const NumberOfBeings = ({numberOfBeings, triggerNumberOfBeingsUpdate}: {numberOf
 {
     return (
         <div>
-            <label>
+            <label htmlFor="numberOfBeings">
                 Number of Beings:
             </label>
-            <input type="number" value={numberOfBeings} name="numberOfBeings" onChange={(e) => triggerNumberOfBeingsUpdate(e.target.value)} />
+            <input id="numberOfBeings" type="number" value={numberOfBeings} name="numberOfBeings" onChange={(e) => triggerNumberOfBeingsUpdate(e.target.value)} />
         </div>
     );
 }

@@ -9,3 +9,10 @@ test('test Number of Beings label text', () => {
     const someText = screen.getByText("Number of Beings:");
     expect(someText).toBeInTheDocument();
 });
+
+test('test Number of Beings input 100', () => {
+    const testNumber=100
+    const myMockFn = jest.fn(cb => cb(null, true));
+    render(<NumberOfBeings numberOfBeings={testNumber} triggerNumberOfBeingsUpdate={myMockFn}/>);
+    expect(screen.getByLabelText('Number of Beings:')).toHaveValue(testNumber);
+});

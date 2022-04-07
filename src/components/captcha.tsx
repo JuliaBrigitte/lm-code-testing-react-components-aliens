@@ -4,10 +4,10 @@ const Captcha = ({captcha, triggerCaptchaUpdate}: {captcha: string, triggerCaptc
 {
     return (
         <div>
-            <label>
+            <label htmlFor="captcha">
                 What is 2 + 2:
             </label>
-            <select value={captcha} name="captcha" onChange={(e) => triggerCaptchaUpdate(e.target.value)}>
+            <select id="captcha" value={captcha} name="captcha" onChange={(e) => triggerCaptchaUpdate(e.target.value)}>
                     <option value="none">none</option>
                     <option value="2">2</option>
                     <option value="Not 2">Not 2</option>
