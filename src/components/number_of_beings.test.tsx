@@ -1,5 +1,6 @@
-import { render, screen } from '@testing-library/react';
+import {fireEvent, render, screen} from '@testing-library/react';
 import NumberOfBeings from "./number_of_beings";
+import PlanetName from "./planet-name";
 
 
 test('test Number of Beings label text', () => {

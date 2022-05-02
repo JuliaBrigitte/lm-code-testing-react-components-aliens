@@ -19,10 +19,10 @@ const PlanetName = ({planetName, triggerPlanetNameUpdate}: {planetName: string, 
 
     return (
         <div>
-            <label>
+            <label htmlFor="planetName">
                 Planet Name:
             </label>
-            <input type="text" value={planetName} name="planetName" onChange={(e) =>
+            <input type="text" value={planetName} name="planetName" id="planetName" onChange={(e) =>
             {
                 const errorMessage = validate(e.target.value);
                 setErrorMessage(errorMessage);

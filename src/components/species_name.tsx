@@ -19,10 +19,10 @@ const SpeciesName = ({speciesName, triggerSpeciesNameUpdate}: {speciesName: stri
 
     return (
         <div>
-            <label>
+            <label htmlFor="speciesName">
                 Species Name:
             </label>
-            <input type="text" value={speciesName} name="speciesName" onChange={(e) =>
+            <input type="text" value={speciesName} name="speciesName" id="speciesName" onChange={(e) =>
             {
                 const errorMessage = validate(e.target.value);
                 setErrorMessage(errorMessage);

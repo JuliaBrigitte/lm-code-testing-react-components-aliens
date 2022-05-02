@@ -1,6 +1,6 @@
 import {useState} from "react";
 
-const ReasonForSparing = ({reasonForSparing, triggerReasonForSparingUpdate}: {reasonForSparing: string, triggerReasonForSparingUpdate: Function}) : JSX.Element =>
+const ReasonForSparing = ({reasonForSparing, triggerReasonForSparingUpdate}: {reasonForSparing: string, triggerReasonForSparingUpdate: Function})  =>
 {
     const [ errorMessage, setErrorMessage ] = useState<string | undefined>("");
     const validate = (value: string) =>
@@ -16,10 +16,10 @@ const ReasonForSparing = ({reasonForSparing, triggerReasonForSparingUpdate}: {re
 
     return (
         <div>
-            <label>
+            <label htmlFor="reasonForSparing">
                 Reason for Sparing:
             </label>
-            <textarea value={reasonForSparing} name="reasonForSparing" onChange={(e) =>
+            <textarea value={reasonForSparing} name="reasonForSparing" id="reasonForSparing" onChange={(e) =>
             {
                 const errorMessage = validate(e.target.value);
                 setErrorMessage(errorMessage);
